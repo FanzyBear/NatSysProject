@@ -1,10 +1,10 @@
 # Net&Sys Assignment: Running Containers for Application Development
 
-Group Name: __Fill your team name__. 
+Group Name: __FanzyBear__. 
 
 Team Mates:
-1. __Fill name__ and __matric no__
-2. __Fill name__ and __matric no__
+1. __Muhammad Syahir bin Mohd Kamal__ and __2214771__
+2. __Muhammad Zaid Bin Mohd Riduan__ and __2219147__
 3. __Fill name__ and __matric no__
 
 ## Rules
@@ -22,7 +22,7 @@ Team Mates:
 
 ***Questions:***
 
-1. What is the link of the fork Net&Sys Assignment in your repository. ***(1 mark)*** __Fill answer here__.
+1. What is the link of the fork Net&Sys Assignment in your repository. ***(1 mark)*** __(https://github.com/FanzyBear/NatSysProject)__.
 2. How many files and folders are in this repository. ***(1 mark)*** __Fill answer here__.
 
 
