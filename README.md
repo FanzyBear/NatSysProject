@@ -82,12 +82,14 @@ codespace
 
 Look at the TERMINAL tab. Run the following commands and provide the output here. 
 
-1. Run the command **pwd** . ***(1 mark)*** __```bash
+1. Run the command **pwd** . ***(1 mark)***
+```bash
 @muhdsyahirk ➜ /workspaces/NatSysProject (main) $ pwd
 /workspaces/NatSysProject
 codespace
-```__.
-2. Run the command **cat /etc/passwd** . ***(1 mark)*** __```bash
+```
+2. Run the command **cat /etc/passwd** . ***(1 mark)***
+```bash
 @muhdsyahirk ➜ /workspaces/NatSysProject (main) $ cat /etc/passwd
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
@@ -115,8 +117,9 @@ messagebus:x:104:105::/nonexistent:/usr/sbin/nologin
 codespace:x:1000:1000::/home/codespace:/bin/bash
 sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
 codespace
-```__.
-3. Run the command **df** . ***(1 mark)*** __```bash
+```
+3. Run the command **df** . ***(1 mark)***
+```bash
 @muhdsyahirk ➜ /workspaces/NatSysProject (main) $ df
 Filesystem     1K-blocks     Used Available Use% Mounted on
 overlay         32847680 10381080  20772500  34% /
@@ -126,8 +129,9 @@ shm                65536        8     65528   1% /dev/shm
 /dev/sdb1       46127956      108  43752272   1% /tmp
 /dev/loop3      32847680 10381080  20772500  34% /workspaces
 codespace
-```__.
-4. Run the command **du** . ***(1 mark)*** __```bash
+```
+4. Run the command **du** . ***(1 mark)***
+```bash
 @muhdsyahirk ➜ /workspaces/NatSysProject (main) $ du
 4       ./.git/branches
 8       ./.git/objects/1b
@@ -222,13 +226,16 @@ codespace
 1972    ./images
 4668    .
 codespace
-```__.
-5. Run the command **ls** . ***(1 mark)*** __```bash
+```
+5. Run the command **ls** . ***(1 mark)***
+```bash
 @muhdsyahirk ➜ /workspaces/NatSysProject (main) $ ls
 README.md  images
 codespace
-```__.
-6. Run the command **ls -asl** . ***(1 mark)*** __```bash
+```
+
+6. Run the command **ls -asl** . ***(1 mark)***
+```bash
 @muhdsyahirk ➜ /workspaces/NatSysProject (main) $ ls -asl
 total 36
  4 drwxrwxrwx+ 4 codespace root  4096 Jun 15 08:39 .
@@ -236,15 +243,18 @@ total 36
  4 drwxrwxrwx+ 9 codespace root  4096 Jun 15 08:43 .git
 20 -rw-rw-rw-  1 codespace root 17375 Jun 15 09:10 README.md
  4 drwxrwxrwx+ 2 codespace root  4096 Jun 15 08:39 images
- codespace```__.
-7. Run the command **free -h** . ***(1 mark)*** __```bash
+ codespace
+ ```
+7. Run the command **free -h** . ***(1 mark)***
+```bash
 @muhdsyahirk ➜ /workspaces/NatSysProject (main) $ free -h
               total        used        free      shared  buff/cache   available
 Mem:          7.7Gi       1.4Gi       180Mi        67Mi       6.2Gi       6.0Gi
 Swap:            0B          0B          0B
 codespace
-```__.
-8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** __```bash
+```
+8. Run the command **cat /proc/cpuinfo** . ***(1 mark)***
+```bash
 @muhdsyahirk ➜ /workspaces/NatSysProject (main) $ cat /proc/cpuinfo
 processor       : 0
 vendor_id       : AuthenticAMD
@@ -341,7 +351,7 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6161.0 avail Mem
    4238 root      20   0    2616   1536   1536 S   0.0   0.0   0:00.00 sh                                          
    4455 codespa+  20   0   16628  11520   3456 S   0.0   0.1   0:00.19 bash    
    codespace
-   ```__.
+   ```
 10. Run the command **uname -a**. ***(1 mark)*** __Fill answer here__.
 11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
 12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
