@@ -56,15 +56,7 @@ Team Mates:
 ***Questions:***
 
 1. What is default OS used to run the virtual environment for codespaces. ***(1 mark)*** __Ubuntu Linux.__.
-2. What are the two options of RAM, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** __First options,
-    RAM: 8GB
-    vCPU: 2-core
-    Disk: 32GB
-
-Second options,
-    RAM: 16GB
-    vCPU: 4-core
-    Disk: 32GB__.
+2. What are the two options of RAM, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** __First options, RAM: 8GB, vCPU: 2-core, Disk: 32GB. Second options, RAM: 16GB, vCPU: 4-core, Disk: 32GB__.
 3. Why must we commit and sync our current work on source control? ***(1 mark)*** __To save our work progress to the main repository.__.
 
 ## Exploring the Terminal
@@ -353,14 +345,155 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6161.0 avail Mem
    4455 codespa+  20   0   16628  11520   3456 S   0.0   0.1   0:00.19 bash    
 codespace
 ```
-10. Run the command **uname -a**. ***(1 mark)*** __Fill answer here__.
-11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
-12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
-13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
-14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
-15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
+10. Run the command **uname -a**. ***(1 mark)***
+```bash
+@muhdsyahirk ➜ /workspaces/NatSysProject (main) $ uname -a
+Linux codespaces-d572df 6.5.0-1021-azure #22~22.04.1-Ubuntu SMP Tue Apr 30 16:08:18 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+codespace
+```
+11. What is the available free memory in the system. ***(1 mark)*** __199Mi__.
+```bash
+@muhdsyahirk ➜ /workspaces/NatSysProject (main) $ free -h
+              total        used        free      shared  buff/cache   available
+Mem:          7.7Gi       1.4Gi       199Mi        67Mi       6.2Gi       6.0Gi
+Swap:            0B          0B          0B
+codespace
+```
+12. What is the available disk space mounted on /workspace. ***(1 mark)*** __20772028 (20G)__.
+```bash
+@muhdsyahirk ➜ /workspaces/NatSysProject (main) $ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+overlay         32847680 10381552  20772028  34% /
+tmpfs              65536        0     65536   0% /dev
+shm                65536        8     65528   1% /dev/shm
+/dev/root       30298176 24432156   5849636  81% /vscode
+/dev/sdb1       46127956      128  43752252   1% /tmp
+/dev/loop3      32847680 10381552  20772028  34% /workspaces
+codespace
+```
+13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Version: 20.04.6 LTS (Focal Fossa), Hardware architecture: x86_64__.
+```bash
+@muhdsyahirk ➜ /workspaces/NatSysProject (main) $ cat /etc/os-release
+NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+
+@muhdsyahirk ➜ /workspaces/NatSysProject (main) $ uname -a
+Linux codespaces-d572df 6.5.0-1021-azure #22~22.04.1-Ubuntu SMP Tue Apr 30 16:08:18 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+codespace
+```
+14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __ls: list the names of files and directories in the current working directory. ls -asl: a - show all files (including starts with dot), s - show the file size, l - show details like file permission, owner, group, size, date modified and the file name__.
+15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __TLB size: 2560 4k pages (2560 entries, 4KB pages)__.
+```bash
+@muhdsyahirk ➜ /workspaces/NatSysProject (main) $ cat /proc/cpuinfo
+processor       : 0
+vendor_id       : AuthenticAMD
+cpu family      : 25
+model           : 1
+model name      : AMD EPYC 7763 64-Core Processor
+stepping        : 1
+microcode       : 0xffffffff
+cpu MHz         : 3242.931
+cache size      : 512 KB
+physical id     : 0
+siblings        : 2
+core id         : 0
+cpu cores       : 1
+apicid          : 0
+initial apicid  : 0
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+bugs            : sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips        : 4890.85
+TLB size        : 2560 4K pages
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 48 bits physical, 48 bits virtual
+power management:
+
+processor       : 1
+vendor_id       : AuthenticAMD
+cpu family      : 25
+model           : 1
+model name      : AMD EPYC 7763 64-Core Processor
+stepping        : 1
+microcode       : 0xffffffff
+cpu MHz         : 3242.292
+cache size      : 512 KB
+physical id     : 0
+siblings        : 2
+core id         : 0
+cpu cores       : 1
+apicid          : 1
+initial apicid  : 1
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+bugs            : sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips        : 4890.85
+TLB size        : 2560 4K pages
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 48 bits physical, 48 bits virtual
+power management:
+codespace
+```
+16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Processor 0: 3242.931 MHz. Processor 1: 3242.292 MHz__.
+17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __PID 2726__.
+```bash
+processor       : 1
+vendor_id       : AuthenticAMD
+cpu family      : 25
+model           : 1
+model name      : AMD EPYC 7763 64-Core Processor
+stepping        : 1
+microcode       : 0xffffffff
+cpu MHz         : 3242.292
+cache size      : 512 KB
+physical id     : 0
+siblings        : 2
+core id         : 0
+cpu cores       : 1
+apicid          : 1
+top - 10:04:14 up  1:30,  0 users,  load average: 0.14, 0.28, 0.22
+Tasks:  17 total,   1 running,  16 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  6.1 us,  5.2 sy,  0.0 ni, 88.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7929.6 total,    195.1 free,   1463.5 used,   6271.0 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6083.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                     
+   2726 codespa+  20   0   21.5g 343628  49920 S   1.0   4.2   1:51.39 node                                        
+      1 codespa+  20   0    1136    640    640 S   0.0   0.0   0:00.17 docker-init                                 
+      7 codespa+  20   0    7236   1792   1792 S   0.0   0.0   0:00.02 sleep                                       
+     49 root      20   0   12196   3480   2560 S   0.0   0.0   0:00.00 sshd                                        
+    895 root      20   0 1983432  85328  53120 S   0.0   1.1   0:00.78 dockerd                                     
+    903 root      20   0 1798832  46212  30848 S   0.0   0.6   0:01.73 containerd                                  
+   1649 codespa+  20   0    2616   1536   1536 S   0.0   0.0   0:00.00 sh                                          
+   1685 root      20   0    2616   1408   1408 S   0.0   0.0   0:00.00 sh                                          
+   2447 codespa+  20   0    2624   1536   1536 S   0.0   0.0   0:00.01 sh                                          
+   2477 codespa+  20   0 1328256 104532  45440 S   0.0   1.3   0:11.74 node                                        
+   2779 codespa+  20   0 1240564  55132  41216 S   0.0   0.7   0:00.76 node                                        
+   3230 codespa+  20   0 1117992  66832  42240 S   0.0   0.8   0:05.14 node                                        
+   3718 codespa+  20   0 1022164  88876  40704 S   0.0   1.1   0:12.37 node                                        
+   4194 codespa+  20   0    2616   1408   1408 S   0.0   0.0   0:00.01 sh                                          
+   4238 root      20   0    2616   1536   1536 S   0.0   0.0   0:00.00 sh                                          
+   4455 codespa+  20   0   16628  11648   3456 S   0.0   0.1   0:00.28 bash   
+codespace
+```
 
 ## Running your own container instance.
 
