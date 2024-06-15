@@ -312,8 +312,9 @@ cache_alignment : 64
 address sizes   : 48 bits physical, 48 bits virtual
 power management:
 codespace
-```__.
-9. Run the command **top** and type **q** to quit. ***(1 mark)*** __```bash
+```
+9. Run the command **top** and type **q** to quit. ***(1 mark)***
+```bash
 processor       : 1
 vendor_id       : AuthenticAMD
 cpu family      : 25
@@ -350,8 +351,8 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6161.0 avail Mem
    4194 codespa+  20   0    2616   1408   1408 S   0.0   0.0   0:00.01 sh                                          
    4238 root      20   0    2616   1536   1536 S   0.0   0.0   0:00.00 sh                                          
    4455 codespa+  20   0   16628  11520   3456 S   0.0   0.1   0:00.19 bash    
-   codespace
-   ```
+codespace
+```
 10. Run the command **uname -a**. ***(1 mark)*** __Fill answer here__.
 11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
 12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
